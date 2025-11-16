@@ -1,9 +1,10 @@
 #include <mbed.h>
 #include "AS5600.h"
 
-AS5600::AS5600()
+AS5600::AS5600(PinName SDA, PinName SCL)
 {
-    i2c = new I2C(PB_9, PB_8);
+    // i2c = new I2C(PB_9, PB_8);
+    i2c = new I2C(SDA, SCL);
     revolutions = 0;
     offset = 0;
     first = 1;
