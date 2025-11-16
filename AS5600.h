@@ -30,7 +30,7 @@
 class AS5600
 {
   public:
-    AS5600();
+    AS5600(PinName SDA, PinName SCL);
     long getPosition();
     int getAngle();
     int getStatus();
